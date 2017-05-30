@@ -3,24 +3,24 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
-    <ui:composition template="/templates/page-template.xhtml">
+    <ui:composition template="/page-template.xhtml">
         <ui:param name="pageTitle" value="Popular Products"/>
         <ui:define name="panel-main">
             <section>
                 <h1>Popular Products</h1>
                 <h:form>
-                    <ui:decorate template="templates/product-summary.xhtml">
+                    <ui:decorate template="/product-summary.xhtml">
                         <ui:param name="productName" value="Microphone"/>
                         <ui:param name="productPrice" value="150.00"/>
                         <ui:define name="product-description">
                             <p>Essential for every vocalist</p>
                         </ui:define>
                     </ui:decorate>
-                    <ui:decorate template="templates/product-summary.xhtml">
+                    <ui:decorate template="/product-summary.xhtml">
                         <ui:param name="productName" value="Guitar"/>
                         <ui:param name="productPrice" value="500.00"/>
                     </ui:decorate>
-                    <ui:decorate template="templates/product-summary.xhtml">
+                    <ui:decorate template="/product-summary.xhtml">
                         <ui:param name="productName" value="Bass"/>
                         <ui:param name="productPrice" value="750.00"/>
                         <ui:define name="product-description">

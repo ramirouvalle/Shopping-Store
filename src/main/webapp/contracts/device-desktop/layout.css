@@ -1,0 +1,6 @@
+/** Desktop layout **/
+.container{
+    margin: .5em auto;
+    padding: 1em;
+    width: 70%;
+}

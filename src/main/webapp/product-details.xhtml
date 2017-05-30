@@ -1,12 +1,21 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://xmlns.jcp.org/jsf/html">
-    <h:head>
-        <title>Facelet Title</title>
-    </h:head>
-    <h:body>
-        Welcome to product details
-    </h:body>
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <ui:composition template="/page-template.xhtml">
+        <ui:param name="pageTitle" value="Product Details"/>
+        <ui:define name="panel-main">
+            <section class="product-details">
+                <h:graphicImage library="shopping-store" name="/images/microphone.jpg" width="400px" alt="Producto descripcion"/>
+                <h:form>
+                    <h1>Microphone product detail static</h1>
+                    <p>Essential for every vocalist - this microphone makes sounds good static text.</p>
+                    <p>Price: $ 95.00 - <h:commandLink>Add to card</h:commandLink></p>
+                    <p><h:outputLink value="index.xhtml">Back to de popular products</h:outputLink></p>
+                </h:form>
+            </section>
+        </ui:define>
+    </ui:composition>
 </html>
 

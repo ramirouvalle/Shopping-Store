@@ -1,0 +1,10 @@
+/** Light Theme **/
+body{
+    background-color: #ecf0f1;
+}
+.container{
+    background-color: #FFF;
+}
+.container a{
+    color: #1abc9c;
+}
