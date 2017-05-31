@@ -26,5 +26,5 @@ public class PopularProducts {
     
     public List<Product> getProducts(){
         return products;
-    }
+    }    
 }

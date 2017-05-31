@@ -9,24 +9,14 @@
             <section>
                 <h1>Popular Products</h1>
                 <h:form>
-                    <ui:decorate template="/product-summary.xhtml">
-                        <ui:param name="productName" value="Microphone"/>
-                        <ui:param name="productPrice" value="150.00"/>
-                        <ui:define name="product-description">
-                            <p>Essential for every vocalist</p>
-                        </ui:define>
-                    </ui:decorate>
-                    <ui:decorate template="/product-summary.xhtml">
-                        <ui:param name="productName" value="Guitar"/>
-                        <ui:param name="productPrice" value="500.00"/>
-                    </ui:decorate>
-                    <ui:decorate template="/product-summary.xhtml">
-                        <ui:param name="productName" value="Bass"/>
-                        <ui:param name="productPrice" value="750.00"/>
-                        <ui:define name="product-description">
-                            <p>Essential for every vocalist</p>
-                        </ui:define>
-                    </ui:decorate>
+                    <ui:repeat value="#{popularProducts.products}" var="product">
+                        <ui:decorate template="/product-summary.xhtml">
+                            <ui:param name="product" value="#{product}"/>
+                            <ui:define name="product-description">
+                                <p>#{product.description}</p>
+                            </ui:define>
+                        </ui:decorate>
+                    </ui:repeat>                    
                 </h:form>
             </section>
         </ui:define>

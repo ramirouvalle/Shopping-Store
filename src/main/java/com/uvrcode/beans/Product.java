@@ -24,4 +24,25 @@ public class Product implements Serializable{
         this.price = price;
         this.imageName = imageName;
     }
+
+    public long getId() {
+        return id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public BigDecimal getPrice() {
+        return price;
+    }
+
+    public String getImageName() {
+        return imageName;
+    }
+    
 }
