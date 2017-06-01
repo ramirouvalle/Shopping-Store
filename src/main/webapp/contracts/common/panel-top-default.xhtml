@@ -6,7 +6,15 @@
     <ui:composition>
         <section>
             <h1>Welcome Visitor!</h1>
-            <p>Your <h:outputLink value="shopping-cart.xhtml">shopping cart</h:outputLink> is empty. Default panel-top-default.xhtml</p>
+            <ui:fragment rendered="#{shoppingCart.totalQuantity == 0}">
+                <p>Your <h:outputLink value="shopping-cart.xhtml">shopping cart</h:outputLink> is empty.</p>
+            </ui:fragment>
+            <ui:fragment rendered="#{shoppingCart.totalQuantity == 1}">
+                <p>Your <h:outputLink value="shopping-cart.xhtml">shopping cart</h:outputLink> contains only one product.</p>
+            </ui:fragment>
+            <ui:fragment rendered="#{shoppingCart.totalQuantity > 1}">
+                <p>Your <h:outputLink value="shopping-cart.xhtml">shopping cart</h:outputLink> contains #{shoppingCart.totalQuantity} items.</p>
+            </ui:fragment>
         </section> 
     </ui:composition>
 </html>

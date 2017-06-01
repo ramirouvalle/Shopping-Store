@@ -6,12 +6,13 @@
       xmlns:f="http://xmlns.jcp.org/jsf/core">
     <ui:composition>
         <section class="product-summary">
-            <h:graphicImage library="shopping-store" name="/images/microphone.jpg" alt="#{product.name}"/>
+            <h:graphicImage library="shopping-store" name="/images/#{product.imageName}" alt="#{product.name}"/>
             <h2>#{product.name}</h2>
             <ui:insert name="product-description">                
                 <p>Default product description.</p>
             </ui:insert>
-            <p>Price: $ #{product.price}- <h:commandLink>Add to cart</h:commandLink></p>
+            <p>Price: $ #{product.price}- <h:commandLink
+                    action="#{shoppingCart.addProduct(product)}">Add to cart</h:commandLink></p>
             <p>
                 <h:outputLink value="product-details.xhtml">
                     <f:param name="productId" value="#{product.id}"/>
